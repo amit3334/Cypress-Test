@@ -17,16 +17,12 @@ pipeline {
     }
     stage('Get dependencies') {
       steps {
-           {
           sh 'npm install'
-        }
       }
     }
     stage('Execute') {
       steps {
-         {
           sh 'npm run test:prod'
-        }
       }
     }
   }
