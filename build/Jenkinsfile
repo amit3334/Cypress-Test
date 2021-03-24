@@ -22,7 +22,8 @@ pipeline {
     }
     stage('Execute') {
       steps {
-          sh 'npm run test:prod'
+          sh 'npm run test:prod',
+          sh 'node report.js'
         }
     }
   }
