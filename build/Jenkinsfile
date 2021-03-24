@@ -29,15 +29,13 @@ pipeline {
 
   post {
     always {
-        cucumber buildStatus: 'UNSTABLE',
-                failedFeaturesNumber: 1,
-                failedScenariosNumber: 1,
-                skippedStepsNumber: 1,
-                failedStepsNumber: 1,
-                reportTitle: 'My report',
-                fileIncludePattern: '**/*cucumber.json',
-                sortingMethod: 'ALPHABETICAL',
-                trendsLimit: 100
+     publishHTML (target : [allowMissing: false,
+ alwaysLinkToLastBuild: true,
+ keepAll: true,
+ reportDir: 'cucumber_report/html',
+ reportFiles: 'cucumber_report.html',
+ reportName: 'My Reports',
+ reportTitles: 'The Report'])
     }
   }
 }
