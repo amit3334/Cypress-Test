@@ -35,7 +35,7 @@ pipeline {
                 skippedStepsNumber: 1,
                 failedStepsNumber: 1,
                 reportTitle: 'My report',
-                fileIncludePattern: '**/*cucumber-report.json',
+                fileIncludePattern: '**/*cucumber.json',
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100
     }
