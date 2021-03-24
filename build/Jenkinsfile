@@ -17,14 +17,14 @@ pipeline {
     }
     stage('Get dependencies') {
       steps {
-        nvm(env.NODE_VERSION) {
+           {
           sh 'npm install'
         }
       }
     }
     stage('Execute') {
       steps {
-        nvm(env.NODE_VERSION) {
+         {
           sh 'npm run test:prod'
         }
       }
