@@ -21,9 +21,11 @@ pipeline {
       }
     }
     stage('Execute') {
+       wrap([$class: 'Xvfb']){
       steps {
           sh 'npm run test:prod'
       }
+       }
     }
   }
 
